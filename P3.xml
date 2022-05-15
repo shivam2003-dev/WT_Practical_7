@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<shopping  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='P3.xsd'>
+        <order>
+            <order_id>2019001</order_id>
+            <description>This is the  description of the ordered books: The order is to be delivered to Mr. ABC</description>
+            <request_date>2019-10-11</request_date>
+            <line_items>
+                <book>
+                    <book_id>7623</book_id>
+                    <book_name>Programming With C</book_name>
+                    <genre>science-fiction</genre>
+                    <publish_date>2011-10-10</publish_date>
+                    <authors>
+                        <author id="311">
+                            <bio>C Language is the Mother of all languages.</bio>
+                            <first_name>X</first_name>
+                            <last_name>YZ</last_name>
+                            <pen_name></pen_name>
+                        </author>
+                    </authors>
+                </book>
+                <quantity>10</quantity>
+                <price>1000</price>
+            </line_items>
+        <line_items>    
+            <book>
+                <book_id>7624</book_id>
+                <book_name>Thriller With Us</book_name>
+                <genre>thriller</genre>
+                <publish_date>2013-10-11</publish_date>
+                <authors>
+                    <author id="302">
+                        <bio>Thrill- a sudden feeling of excitement and pleasure.</bio>
+                        <first_name>A</first_name>
+                        <last_name>BC</last_name>
+                        <pen_name>abc</pen_name>
+                    </author>
+                    <author id="303">
+                        <bio>Adventure- an unusual and exciting or daring experience.</bio>
+                        <first_name>P</first_name>
+                        <last_name>QR</last_name>
+                        <pen_name>pqr</pen_name>
+                    </author>
+                </authors>    
+            </book>
+            <quantity>2</quantity>
+            <price>10000</price>
+        </line_items>
+         <line_items>    
+            <book>
+                <book_id>9999</book_id>
+                <book_name>The Daily Dramas</book_name>
+                <genre>drama</genre>
+                <publish_date>2019-10-19</publish_date>
+                <authors>
+                    <author id="301">
+                        <bio>Drama- an exciting, emotional, or unexpected event or circumstance.</bio>
+                        <first_name>A</first_name>
+                        <last_name>SD</last_name>
+                        <pen_name>asd</pen_name>
+                    </author>
+                    <author id="320">
+                        <bio>Acting- temporarily doing the duties of another person.</bio>
+                        <first_name>F</first_name>
+                        <last_name>GH</last_name>
+                        <pen_name>fgh</pen_name>
+                    </author>
+                </authors>    
+            </book>
+            <quantity>2</quantity>
+            <price>999</price>
+        </line_items>
+        </order>
+</shopping>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="shopping">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="order" maxOccurs="unbounded">
+                 <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="order_id" type="xs:positiveInteger"/>
+                        <xs:element name="description" type="xs:string"/>
+                        <xs:element name="request_date" type="xs:date"/>
+                        <xs:element name="line_items" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="book">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="book_id" type="xs:positiveInteger"/>
+                                                <xs:element name="book_name" type="xs:string"/>
+                                                <xs:element name="genre">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="science-fiction"/>
+                                                            <xs:enumeration value="mystery"/>
+                                                            <xs:enumeration value="thriller"/>
+                                                            <xs:enumeration value="drama"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="publish_date" type="xs:date"/>
+                                                <xs:element name="authors" minOccurs="1" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="author" maxOccurs="unbounded" minOccurs="0">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="bio" type="xs:string" />
+                                                                        <xs:element name="first_name" type="xs:string"  />
+                                                                        <xs:element name="last_name" type="xs:string"  />
+                                                                        <xs:element name="pen_name" minOccurs="0" type="xs:string" />
+                                                                    </xs:sequence>
+                                                                    <xs:attribute name="id" use="optional" type="xs:integer" />
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>     
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>    
+                                    <xs:element name="quantity" type="xs:byte"/>
+                                    <xs:element name="price">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:integer">
+                                                <xs:minInclusive value="1"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>                     
+                    </xs:sequence>
+                    </xs:complexType>
+                </xs:element>    
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
